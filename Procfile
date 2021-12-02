@@ -1,0 +1,1 @@
+web: gunicorn DNACodifier.wsgi
