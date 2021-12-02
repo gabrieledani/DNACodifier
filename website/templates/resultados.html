@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <title>DNA Codifier</title>
+</head>
+<body>
+<div id="header">
+    <h1 class="display-4">DNA CODIFIER</h1>
+</div>
+<div id="header2">
+    <div class="row-header">
+        <div class="column-header"><h2>SEE RESULTS</h2></div>
+    </div>
+</div>
+
+
+<div class="row-header" id="row">
+
+
+    <div class="column-headers">
+        <button onclick="location.href='{% url 'home' %}'"type="button" class="btn btn-warning">Restart Analysis</button>
+        <br><br>
+        <p>{{ resultado }}</p>
+        <br><br>
+        <button type="button" class="btn btn-primary" id="resul1" disabled="true">DOWNLOAD CSV</button><br></br>
+        <button type="button" class="btn btn-primary" id="resul2" disabled="true">DOWNLOAD TXT</button>
+
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
+

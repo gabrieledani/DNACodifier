@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <title>DNA Codifier</title>
+</head>
+<body>
+<div id="header">
+    <h1 class="display-4">DNA CODIFIER</h1>
+</div>
+<div id="header2">
+    <div class="row-header">
+        <div class="column-header"><h2>SELECT A FUNCTION</h2></div>
+        <div class="column-header"><h2>ENTER A SEQUENCE</h2></div>
+        <div class="column-header help">
+            <div class="question"><strong>?</strong></div>
+            <div class="popup">
+                <h3>Instructions</h3>
+                <p> ->Sequences must have <strong>1000</strong> nucleotides maximum, </p>
+                <p> ->Maximum sequences allowed: <strong>5000</strong>.</p>
+                <p> ->File size limit: <strong>5MBs</strong>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row-header" id="row">
+
+    <form action="{% url 'home' %}" method="post" >
+        {% csrf_token %}
+        <div class="column-header form-group" id="col">
+            <select id="selecao" name="valorselecao" class="form-select form-select-sm" aria-label=".form-select-sm example" required>
+                <option selected disabled value="0">-----------Select function-----------</option>
+                <option value="1">Shuffle sequence</option>
+                <option value="2">Calculate enthalpy</option>
+                <option value="3">Calculate entropy</option>
+                <option value="4">Calculate stability</option>
+                <option value="5">Calculate stacking</option>
+            </select>
+        </div>
+
+        <div class="column-header">
+    	  	<textarea class="form-control" id="areatexto" name="areatexto"  rows="3">	</textarea>
+
+            <br></br>
+
+            <input id="gerarresultado" type="submit" value="process" class="btn btn-success btn-lg btn-block" >
+        </div>
+
+    </form>
+
+
+</div>
+
+</body>
+</html>
+

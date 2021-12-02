@@ -1,0 +1,144 @@
+body {
+	background-color: #F5F5F5;
+}
+
+h1 {
+    background-color: #00733C;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+
+h2{
+	color: #67237F;
+}
+
+textarea{
+	border: 2px solid #ccc;
+	background-color: #F5F5F5;
+}
+
+.text{
+	text-overflow: ellipsis;
+	float: left;
+    overflow: hidden;
+}
+
+.container {
+  width: auto;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.row {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col {
+  float: left;
+  width: 32%;
+  display: table;
+  clear: both;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row-header:after {
+  content: "";
+  display: table;
+  clear: both;
+  background-color: #67237F;
+}
+
+.column-header {
+  float: left;
+  width: 32%;
+  text-align: center;
+}
+
+.row-header{
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:visited {
+    color: #ffffff !important;
+    background-color: #67237f !important;
+    border-color: #67237f !important;
+}
+
+.help {
+  width: 4%;
+  padding: 10px;
+  text-align: center;
+  margin: 0 ;
+}
+
+.help .question {
+  height: 35px;
+  width: 35px;
+  background: #ccc;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.help .popup, .help .popup2 {
+  width: 300px;
+  height: 0;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  background: #eee;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+
+.help .popup {
+  left: -100px;
+  top: 10px;
+}
+
+
+.help:hover .popup {
+  opacity: 1;
+  height: 150px;
+}
+
+
+.help .popup h3 {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  height: 30px;
+  background: #555;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.help .popup p {
+  font-size: 12px;
+  padding: 8px;
+  margin: 0;
+}
+
+.help .popup .popup2 .sub-levels {
+  padding: 0 0 10px 140px;
+}
+
+.help .tell-me:hover .popup2 {
+  top: -220px;
+  opacity: 1;
+}
